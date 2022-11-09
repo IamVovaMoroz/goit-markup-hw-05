@@ -13,10 +13,12 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+  
+    <button data-modal-open>Открыть модалку</button>
+    
     <header class="site-header">
       <div class="container main-menu">
-        
-      <nav>
+            <nav>
         <!-- Роздiл Навигацiя сайту-->
         <ul class="navigat set">
           <li class="li-logo-main">
@@ -58,7 +60,7 @@
         <div class="container-hero">
         <h1 class="hero-title">Ефективні рішення для <br> вашого бізнесу</h1>
         <button type="button" class="hero-button">Замовити послугу</button>
-      </div>
+      
       </section>
     
 
@@ -93,10 +95,17 @@
             </p></li>
        
           </ul>
+       
+          <!-- Overlay backdrop серый фон-->
+
         
-        
-        
+        <div class="backdrop is-hidden data-modal"><div class="modal"><button data-modal-close>Закрыть модалку</button></div>
       </div>
+        
+        
+        
+    </div> 
+     
       </section>
     
       <!-- Роздiл Чим ми займаємося about-->
@@ -105,25 +114,35 @@
         <div class="container ">
         <h2 class="about-title">Чим ми займаємося</h2>
         <div class="adflex">
+
         <div class="about-img">
-        <img
+        <img class="about-picture"
           src="./img/img1a.jpg"
           alt="Desktop-image"
           width="370"
-          height="294"/></div>
+          height="294"/>
+        <div class="about-overlay"></div>
+        <h2 class="about-description">ДЕСКТОПНI ДОДАТКИ</h2>
+        </div>
         
         
         <div class="about-img">
-        <img src="./img/img2a.jpg" alt="mobil-image" width="370" height="294" /></div>
+        <img class="about-picture" src="./img/img2a.jpg" alt="mobil-image" width="370" height="294" />
+        <div class="about-overlay"></div>
+        <h2 class="about-description">МОБIЛЬНI ДОДАТКИ</h2>
+      </div>
 
 
         <div class="about-img">
-        <img
+        <img class="about-picture"
           src="./img/img3a.jpg"
           alt="tablet-image"
           width="370"
           height="294"
-        /></div>
+                  />
+                  <div class="about-overlay"></div>
+                  <h2 class="about-description">ДИЗАЙНЕРСЬКI РIШЕННЯ</h2>       
+      </div>
       </div>
       </div>
       </section>
@@ -362,6 +381,6 @@
         </a></li></ul></div>></div></div>
     
     </footer>
-  
+    <script src="./js/modal.js"></script>
   </body>
 </html>

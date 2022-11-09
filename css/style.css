@@ -309,7 +309,7 @@ text-decoration: none;
 .team-position{padding: 0px;
     margin: 0;}
     
-.about-img{margin-right: 30px; display: inline-block; }
+.about-img{margin-right: 30px; }
 
 .about-img:last-child{margin-right: 0;}
 
@@ -543,3 +543,56 @@ margin-right: 10px;
 .block-sample:hover{border: 1px solid #EEEEEE; 
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);}
 .block-sample{box-sizing: border-box; margin-right: 28px; }
+
+
+/* Позиционирование Чим ми займаємося */
+.about-img{position: relative; display: flex;}
+
+.about-description{ 
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+    color: var(--second-text-colour); position: absolute;  bottom:27px; left:107px;
+   
+    
+}
+
+.about-overlay{background-color: rgba(47, 48, 58, 0.8); width: 370px; height: 70px; position: absolute; bottom:0; left:0; }
+
+
+/* Позиционирование Роздiлу Навигацiя  */
+
+.studio, .portfolio{position: relative;}
+
+
+.current::after {
+    position: absolute;
+    bottom: -43px;
+    right: 0;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--button-text-colour);
+    border-radius: 2px;} 
+
+   
+    /* Позиционирование overlay backdrop*/
+
+    
+    .backdrop{position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    /* background-color:  rgba(0, 0, 0, 0.1 ); */
+    background-color: var(--second-text-colour) ;
+   
+    }
+
+    .backdrop.is-hidden{opacity: 0; pointer-events: none;} */
+
+/* .modal{position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%,-50%);
+     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px; min-width: 528px; min-height: 581px; background-color: var(--button-text-colour);  }

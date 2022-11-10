@@ -313,7 +313,7 @@ text-decoration: none;
 
 .about-img:last-child{margin-right: 0;}
 
-.site-header{padding-top: 32px; padding-bottom: 32px; border-bottom: 1px solid #ECECEC;
+.site-header{padding-top: 24px; padding-bottom: 25px; border-bottom: 1px solid #ECECEC;
 }
  
 .web-foot{padding-top: 60px; padding-bottom: 60px; }
@@ -585,9 +585,11 @@ margin-right: 10px;
  .studio, .portfolio{position: relative; display: flex;}
 
 
+
+
 .current::after {
     position: absolute;
-    bottom: -43px;
+    bottom: -34px;
     right: 0;
     /* top: 0; */
     /* margin-bottom:-32px ; */

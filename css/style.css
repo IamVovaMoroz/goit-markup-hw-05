@@ -587,9 +587,9 @@ margin-right: 10px;
 
 .current::after {
     position: absolute;
-    /* bottom: -43px;
-    right: 0; */
-    top: 0;
+    bottom: -43px;
+    right: 0;
+    /* top: 0; */
     /* margin-bottom:-32px ; */
     content: "";
     width: 100%;

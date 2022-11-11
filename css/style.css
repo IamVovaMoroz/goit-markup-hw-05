@@ -621,4 +621,7 @@ margin-right: 10px;
     background-color: var(--second-text-colour);  }
 
 
-    .backdrop{position: absolute; top: 0; right: 0;}
+    .backdrop{position: fixed; top: 0; right: 0; opacity: 1; z-index: 2;}
+
+
+    .button-modal{top: 0; right: 0; position: fixed;}

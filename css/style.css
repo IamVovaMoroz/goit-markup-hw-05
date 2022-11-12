@@ -32,7 +32,7 @@ padding-right: 15px;
 
 .set{list-style: none;} 
 
-.pointing:hover, .pointing:focus{color: #2196F3;} 
+.pointing:hover, .pointing:focus{color: var(--button-text-colour);} 
 
 
 .current{color: var(--button-text-colour);}
@@ -560,19 +560,27 @@ margin-right: 10px;
 
 
 /* Позиционирование Портфолио portfolio samples */
+/* transition: transform 250ms linear; */
 
-.samples-overlay{position: relative; display: flex; }
+.block-sample {cursor: pointer;  overflow: hidden; }
+.samples-overlay{position: relative; display: flex;  }
 
-.samples-backdrop{width: 370px; height: 294px; background: rgba(33, 150, 243, 0.9); position: absolute; padding-top: 63px; padding-bottom: 63px; padding-left: 24px; padding-right: 24px;}
-
+.samples-backdrop{width: 370px; height: 294px; background: rgba(33, 150, 243, 0.9); position: absolute; padding-top: 63px; padding-bottom: 63px; padding-left: 24px; padding-right: 24px;
+    transform: translateY(100%); 
+   
+ }
 
 .samples-backdrop-text{position: absolute; color: var(--second-text-colour); padding-top: 63px; padding-bottom: 63px; padding-left: 24px; padding-right: 24px;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.55;
-   
-    
+    transform: translateY(100%);
+        
 }
+
+.block-sample .samples-backdrop:hover, .samples-backdrop-text:hover {
+    transform: translateY(0); transition:  3250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
 
 .about-overlay{background-color: rgba(47, 48, 58, 0.8); width: 370px; height: 70px; position: absolute; bottom:0; left:0; }
@@ -589,7 +597,7 @@ margin-right: 10px;
 
 .current::after {
     position: absolute;
-    bottom: -34px;
+    bottom: -35px;
     right: 0;
     /* top: 0; */
     /* margin-bottom:-32px ; */
@@ -625,3 +633,9 @@ margin-right: 10px;
 
 
     .button-modal{top: 0; right: 0; position: fixed;}
+
+     
+  /* Задаем transition  250ms на все hover */
+
+    .studio, .portfolio, .navigat-contact, .auth-email,.auth-tel, .social-link, .filter-button, .block-sample, .sample-img, .social-link, .item-clients,
+    .icon-email, .client-icon, .foot-social-link, .icon-phone,  {transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);}

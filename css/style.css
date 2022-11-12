@@ -560,26 +560,32 @@ margin-right: 10px;
 
 
 /* Позиционирование Портфолио portfolio samples */
-/* transition: transform 250ms linear; */
+/* transition: transform 250ms linear;  */
 
-.block-sample {cursor: pointer;  overflow: hidden; }
+.block-sample {cursor: pointer;   }
 .samples-overlay{position: relative; display: flex;  }
 
+/* .sample-img{overflow: hidden;} */
+
+/* overflow: hidden; */
+
 .samples-backdrop{width: 370px; height: 294px; background: rgba(33, 150, 243, 0.9); position: absolute; padding-top: 63px; padding-bottom: 63px; padding-left: 24px; padding-right: 24px;
-    transform: translateY(100%); 
+    transform: translateY(100%); top: 0; left: 0;
    
  }
 
-.samples-backdrop-text{position: absolute; color: var(--second-text-colour); padding-top: 63px; padding-bottom: 63px; padding-left: 24px; padding-right: 24px;
+.samples-backdrop-text{ color: var(--second-text-colour);
     font-weight: 400;
     font-size: 18px;
     line-height: 1.55;
-    transform: translateY(100%);
-        
+    /* position: fixed; */
+    
+    /* transform: translateY(100%); */
+    /* padding-top: 63px; padding-bottom: 63px; padding-left: 24px; padding-right: 24px; */
 }
-
-.block-sample .samples-backdrop:hover, .samples-backdrop-text:hover {
-    transform: translateY(0); transition:  3250ms cubic-bezier(0.4, 0, 0.2, 1);
+/* .samples-overlay{overflow: hidden;} */
+.samples-overlay:hover .samples-backdrop:hover, .samples-backdrop-text {
+    transform: translateY(0); transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
 
@@ -599,8 +605,6 @@ margin-right: 10px;
     position: absolute;
     bottom: -35px;
     right: 0;
-    /* top: 0; */
-    /* margin-bottom:-32px ; */
     content: "";
     width: 100%;
     height: 4px;
@@ -626,7 +630,8 @@ margin-right: 10px;
     top: 50%; left: 50%; transform: translate(-50%,-50%);
      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px; min-width: 528px; min-height: 581px; 
-    background-color: var(--second-text-colour);  }
+    background-color: var(--second-text-colour); 
+ }
 
 
     .backdrop{position: fixed; top: 0; right: 0; opacity: 1; z-index: 2;}
@@ -638,4 +643,5 @@ margin-right: 10px;
   /* Задаем transition  250ms на все hover */
 
     .studio, .portfolio, .navigat-contact, .auth-email,.auth-tel, .social-link, .filter-button, .block-sample, .sample-img, .social-link, .item-clients,
-    .icon-email, .client-icon, .foot-social-link, .icon-phone,  {transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);}
+    .icon-email, .client-icon, .foot-social-link, .icon-phone  {transition-property: all; transition-duration: 250ms; transition-timing-function:  cubic-bezier(0.4, 0, 0.2, 1);}
+    /* {transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);}  аналогично сокращенно*/

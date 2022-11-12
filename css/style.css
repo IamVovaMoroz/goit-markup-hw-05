@@ -42,7 +42,12 @@ padding-right: 15px;
 .navigat, .auth{padding: 0; margin: 0;}
 .auth{margin-left: auto;}
 
-
+a{ 
+    text-decoration: none; 
+} 
+img{ 
+    display: block; 
+}
 
 .hero{text-align: center;}
 
@@ -558,33 +563,6 @@ margin-right: 10px;
 }
 
 
-
-/* Позиционирование Портфолио portfolio samples */
-/* transition: transform 250ms linear;  */
-
-.block-sample {cursor: pointer;   }
-.samples-overlay{position: relative; display: flex;  }
-
-/* .sample-img{overflow: hidden;} */
-
-/* overflow: hidden; */
-
-.samples-backdrop{position: absolute; width: 370px; height: 294px; background: rgba(33, 150, 243, 0.9);  padding-top: 63px; padding-bottom: 63px; padding-left: 24px; padding-right: 24px;
-    transform: translateY(100%); top: 0; left: 0;
-   
- }
-
-.samples-backdrop-text{ color: var(--second-text-colour);
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.55;
-    /* position: fixed; */
-    
-    /* transform: translateY(100%); */
-    /* padding-top: 63px; padding-bottom: 63px; padding-left: 24px; padding-right: 24px; */
-}
-/* .samples-overlay{overflow: hidden;} */
-
 .samples-overlay:hover .samples-backdrop:hover, .samples-backdrop-text {
     transform: translateY(0); transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -638,11 +616,49 @@ margin-right: 10px;
     .backdrop{position: fixed; top: 0; right: 0; opacity: 1; z-index: 2;}
 
 
-    .button-modal{top: 0; right: 0; position: fixed;}
+    .button-modal{top: 8px; right: 8px; position: fixed;}
 
      
   /* Задаем transition  250ms на все hover */
 
     .studio, .portfolio, .navigat-contact, .auth-email,.auth-tel, .social-link, .filter-button, .block-sample, .sample-img, .social-link, .item-clients,
-    .icon-email, .client-icon, .foot-social-link, .icon-phone  {transition-property: all; transition-duration: 250ms; transition-timing-function:  cubic-bezier(0.4, 0, 0.2, 1);}
+    .icon-email, .client-icon, .foot-social-link, .icon-phone  {
+        transition-property: all; 
+        transition-duration: 250ms;
+        transition-timing-function: 
+        cubic-bezier(0.4, 0, 0.2, 1);}
     /* {transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);}  аналогично сокращенно*/
+
+
+     .button-modal{border: none; background-color: var(--second-text-colour); height: 30px; width: 30px; background-image:url(../img/close.png); cursor: pointer;}
+
+/* Позиционирование Портфолио portfolio samples */
+/* transition: transform 250ms linear;  */
+
+     .rekurs{ 
+        position: relative; 
+        overflow: hidden; 
+      } 
+      .overlay { 
+        position: absolute; 
+        width: 370px; 
+        height: 294px; 
+        padding-left: 24px; 
+        padding-right: 24px; 
+        display: flex; 
+        color:  var(--second-text-colour); 
+        font-size: 18px; 
+        line-height: 1.55; 
+        letter-spacing: 0.54px; 
+        background-color: rgba(33, 150, 243, 0.9); 
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+      } 
+       
+      .samples li:focus .overlay, 
+      .samples li:hover .overlay { 
+          transform: translateY(-100%); 
+      } 
+       
+      .overlay p { 
+          margin: auto; 
+      }
